@@ -1,0 +1,557 @@
+/*
+Universal design in web development is about creating web applications that should be usable for people with different abilities. When using colours I have clearly shown which objects / cases are solved and which are not solved. When a case is resolved, the color of the article is green. This is to show the user that the case is positive and therefore resolved. I have used the colours to create a simple and intuitive solution for all users regardless of knowledge. The solution also contains notifications that pops up if the user makes any changes. This is because the user should always receive feedback if something happen. All images in the code are encoded so that if the image is not displayed, a text will explain what the image should show.
+*/
+
+
+/*
+******************************************** Style for front-page.html *****************************************************
+*/
+
+*{
+    font-family: helvetica, arial, sans-serif;
+}
+
+#container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+   
+}
+/* 
+*********************************************** Navigation **************************************************************
+*/
+#top-nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #161616;
+}
+
+#logo{
+    position: absolute;
+    width: 40px;
+    bottom: 10%;
+    left: 1%;
+    border-radius: 6px;
+}
+
+nav ul li{
+    list-style: none;
+    float: right;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #ccc;
+    width: 16.6667%; 
+    width: calc(100% / 8);
+    margin-top: 0.5rem;
+    box-sizing: border-box;
+}
+
+.nav-txt{
+    color: white;
+    text-decoration: none;
+}
+
+#drop-btn{
+    position: relative;
+    left: 10%;
+    height: 1rem;
+    background-color: #161616;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+#settings{
+    position: absolute;
+    left: 68%;
+    bottom: 40%;
+    display: inline-block;
+    border-top: 1rem;
+}
+
+.drop-content{
+    display: none;
+    position: absolute;
+    width: 30%;
+    background-color: #161616 ;
+    min-width: 160px;
+    left: -200%;
+    z-index: 1;
+    color: black;
+}
+
+
+#settings:hover .drop-content{
+    display: block;
+}
+
+
+#filter-btn{
+    font-size: 16px;
+    border: 0.1rem solid #000000;
+    font-weight: 300;
+    margin: 0.5rem;
+}
+#un-filter-btn{
+    font-size: 16px;
+    border: 0.1rem solid #000000;
+    font-weight: 300;
+    margin: 0.5rem;
+}
+
+#filter-btn:hover {
+    border-radius: 50px;
+    transition: all 0.5s ease 0s;
+}
+
+#un-filter-btn:hover {
+    border-radius: 50px;
+    transition: all 0.5s ease 0s;
+}
+
+/*
+************************************** Banner and animation in the banner ****************************************************
+*/
+
+#banner{
+    position: absolute;
+    width: 100%;
+    height: 230px;
+    background-color: aliceblue;
+    top: 10%;
+    overflow: hidden;
+}
+
+#plane{
+    position: absolute;
+    width: 5%;
+    transform: rotate(-2deg) scaleX(-1);
+    right: -20%;
+    bottom: 40%;
+}
+
+#explotion{
+    position: absolute;
+    width: 3%;
+    transform: rotate(90deg);
+    bottom: -5%;
+    left: -1%;
+    opacity: 0;
+    animation-name: exploition;
+    animation-duration: 2s;
+    animation-delay: 3.2s;
+    animation-timing-function: linear;
+}
+
+@keyframes exploition {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+#banner-txt{
+    position: absolute;
+    width: 65%;
+    font-family:monospace;
+    text-transform: uppercase;
+    font-size: 45px;
+    left: 25%;
+    bottom: 25%;
+    padding: 20px;
+    opacity: 0;
+}
+
+#banner-txt:hover {
+text-shadow: 0px 0px 12px rgba(95, 103, 105, 1);
+transition: all 0.4s ease 0s;
+}
+
+/*
+*********** Style car **********
+*/
+#police-car{
+    position: absolute;
+    height: auto;
+    width: 20%;
+    bottom: 0;
+    right: -50%;
+}
+
+.wheel{
+    position: absolute;
+    width: 3%;
+    height: auto;
+    
+}
+
+#car-wheel-1{
+    bottom: 7px;
+    right: -36%;
+}
+#car-wheel-2{
+    bottom: 7px;
+    right: -47%;
+}
+
+#car-smoke{
+    position: absolute;
+    width: 7%;
+    bottom: -5%;;
+    left: 53%;
+    opacity: 0;
+}
+
+/*
+************ Blue light car **********
+*/
+
+.light{
+    position: absolute;
+    height: 15px;
+    width: 5px;
+    border-radius: 30%;
+}
+#light-1{
+    left: 141%;
+    bottom: 55%;
+     -webkit-transform: rotate(60deg); 
+    -moz-transform: rotate(60deg);   
+    -ms-transform: rotate(60deg);   
+    -o-transform: rotate(60deg);   
+    transform: rotate(70deg);
+}
+
+#light-2{
+    left: 140.5%;
+    bottom: 60%;;
+     -webkit-transform: rotate(50deg); 
+    -moz-transform: rotate(50deg);   
+    -ms-transform: rotate(50deg);   
+    -o-transform: rotate(50deg);   
+    transform: rotate(50deg);
+}
+#light-3{
+    left: 139.5%;
+    bottom: 62%
+}
+
+#light-4{
+    left: 138.6%;
+    bottom:60.4%;
+     -webkit-transform: rotate(310deg);
+    -moz-transform: rotate(310deg);   
+    -ms-transform: rotate(310deg);   
+    -o-transform: rotate(310deg);   
+    transform: rotate(310deg);
+}
+#light-5{
+    left: 138%;
+    bottom: 55%;
+     -webkit-transform: rotate(290deg); 
+    -moz-transform: rotate(290deg);   
+    -ms-transform: rotate(290deg);   
+    -o-transform: rotate(290deg);   
+    transform: rotate(290deg);
+}
+
+
+
+/* 
+***************************************************** Main ***********************************************************************
+*/
+#output-main{
+    position: absolute;
+    top: 40%;
+    width: 98%;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin: 1rem;
+    font-size: 18px;
+    background-color: whitesmoke;
+    
+}
+
+img{
+    width: 80%;
+    margin: 1rem; 
+}
+
+article{
+    height: 250px;
+    position: relative;
+    top: 5%;
+    border: 1rem solid White;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+h3{
+    
+    height: 15%;
+    border-bottom: 0.2rem solid white;
+
+}
+
+#box1{
+    position: absolute;
+    top: 25%;
+    width: 48%;
+    height: 75%;
+    
+}
+
+.box-2{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    height: 99%;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    
+}
+
+#box-3{
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    height: 99%;
+    background-color: rgb(189, 87, 78, 0.8);
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+}
+p{
+    position: relative;
+    left: 15%;
+    margin: 2rem;
+}
+
+
+.DetBtn{
+    position: absolute;
+    left: 60%;
+    bottom: 10%;
+    border: 0.1rem solid #000000;
+    font-weight: 300;
+}
+
+.DetBtn:hover {
+    border-radius: 50px;
+    transition: all 0.5s ease 0s;
+}
+
+
+/*
+******************************************** Detail main / article ***************************************************************
+*/
+.detail-article{
+    width: 50%;
+    height: 80%;
+    display: block;
+    margin: auto;
+    
+}
+/*
+***** slideshow *******
+*/
+#slider{
+    margin: auto;
+    position: relative;
+    width: 70%;
+    height: 40%;
+}
+#slider > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.img-slide{
+    border-radius: 6px;
+    border: 3px solid #161616;
+}
+
+.detail-article p{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 70%;
+    margin: 1rem;
+}
+
+.detail-article h2{
+   margin: 0.5rem;
+}
+
+#backBtn{
+    position: absolute;
+    bottom: 4%;
+    right: 5%;
+    border: 0.1rem solid #000000;
+    font-weight: 300;
+    
+}
+
+#backBtn:hover {
+    border-radius: 50px;
+    transition: all 0.5s ease 0s;
+}
+
+.stateButton{
+    position: absolute;
+    bottom: 2%;
+    color: rgb(189, 87, 78, 0.8);
+    text-transform: uppercase;
+    background: #ffffff;
+    font-weight: 600;
+    padding: 20px;
+    border: 4px solid rgb(189, 87, 78, 0.8);
+    border-radius: 6px;
+    margin: 0.5rem;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+.stateButton:hover {
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    }
+
+#notification-div{
+    position: absolute;
+    background-color: rgb(105, 179, 156, 0.8);
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    opacity: 0;
+}
+#notification-txt{
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    font-size: 24px;
+}
+
+
+
+
+/*
+****************************************** media queris for tablet ***********************************************
+*/
+ @media (max-width: 1100px){
+     
+    #explotion{
+    animation-delay: 1.8s;
+    bottom: 2.5%;
+    
+    }
+    .light{
+    opacity: 0;
+    }
+    #car-smoke{
+    left: 10%;
+    }
+            
+    #output-main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 16px;
+    }
+    #banner-txt{
+    width: 70%;
+    font-size: 30px;
+    left: 20%;
+    }
+    
+    /* 
+    ************************ Detail article ***************
+    */
+    
+    #slider{
+    width: 70%;
+    height: 40%;
+    }
+     
+    .detail-article p{
+    top: 3%;
+    width: 80%;
+    }
+     
+    .detail-article{
+    width: 65%;
+    height: 70%;
+    }
+     
+     .stateButton{
+    bottom: 0%;
+    }
+    #backBtn{
+    bottom: 5%;
+    }
+}
+
+
+
+/*
+************************************* media queris for mobile (iphone X) *****************************************************
+*/
+ @media (max-width: 812px){
+     
+    #explotion{
+    animation-delay: 1.2s;
+    bottom: 14%;
+    }
+            
+    #output-main{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 14px;
+    }
+    article{
+        width: 50%;
+        margin: auto;
+     }
+     .light{
+         height: 9px;
+         width: 3px;
+     } 
+    #banner-txt{
+        width: 70%;
+        font-size: 30px;
+        left: 20%;
+    }
+     
+    /* 
+    ************************ Detail article ***************
+    */
+     
+    #slider{
+    width: 70%;
+    }
+    
+    .detail-article p{
+    top:7%;
+    width: 80%;
+    }
+     
+    .detail-article{
+    width: 85%;
+    height: 65%;
+    }
+     .stateButton{
+    bottom: 0%;
+    }
+    #backBtn{
+    bottom: 5%;
+    }
+    
+}
+
+

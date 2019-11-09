@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Politiet Sikkerhetstjeneste</title>
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/front-page.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+<body>
+    <!--- container with all the content --->
+    <div id="container">
+        
+        <header>
+           <!-- navigation --->
+            <nav id="top-nav">
+            <ul>
+                <div id="settings">
+                    <button id="drop-btn"><i class="material-icons">settings</i></button>
+                    <div class="drop-content">
+                        <input id="filter-btn" type="button" value="Vis åpne saker">
+                        <input id="un-filter-btn" type="button" value="Åpne alle saker">
+                    </div>
+                </div>
+                <li><a class="nav-txt" href="page2.html">Admin</a></li>
+                <li><a class="nav-txt" href="">Forside</a></li>
+                <li><img id="logo" src="images/logo.png" alt="bilde av logo"></li>
+            </ul>
+            </nav>
+        </header>
+        
+        <!--- Banner with animation --->
+        <div id="banner">
+           <h1 id="banner-txt">POLITIES SIKKERHETSTJENESTE</h1>
+           
+            <img id="plane" src="images/plane.png" alt="bilde av ett fly">
+            <img id="explotion" src="images/explotion.png" alt="bilde av en eksplosjon">
+            
+            
+            <img id="police-car" src="images/policeCar.png" alt="bilde av en politi bil">
+            
+            <!-- car wheels -->
+            <img id="car-wheel-1" class="wheel" src="images/car-wheel.png" alt="bilde av ett bil dekk">
+            <img id="car-wheel-2" class="wheel" src="images/car-wheel.png" alt="bilde av ett bil dekk">
+            
+            <img id="car-smoke" src="images/car-smoke.png" alt="bilde av røyk">
+
+            <!-- Light copcar --> 
+            <div class ="light" id="light-1"></div>
+            <div class ="light" id="light-2"></div>
+            <div class ="light" id="light-3"></div>
+            <div class ="light" id="light-4"></div>
+            <div class ="light" id="light-5"></div>
+        </div>
+        
+        <!--- content made in javaScript --->
+        <main id="output-main">
+            
+        </main>
+        
+        
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/array-object.js"></script>
+    <script src="js/page1.js"></script>
+
+    
+</body>
+</html>

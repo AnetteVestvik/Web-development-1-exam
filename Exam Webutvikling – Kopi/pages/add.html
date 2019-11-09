@@ -1,0 +1,45 @@
+<link type="text/css" rel="stylesheet" href="css/add.css">
+
+
+<section id="add">
+    
+    <header>
+        <h3 id="h3-txt">Legg til en ny sak</h3>
+    </header>
+    
+    <article id="add-article">
+      
+       <div id="notification-div2">
+            <p id="notification-txt">En ny sak er lagret</p>
+        </div>
+        <label id="title">Titel</label>
+        <input class="edit-box" id="title-text" type="text">
+        
+        <label id="desc">Beskrivelse</label>    
+        <textarea class="edit-box" id="describtion-text" rows="10" cols="30"></textarea>
+        
+        <label id="type-case">Type sak</label>
+        <input class="edit-box" id="type-txt" type="text">
+        
+        <label id="date">Dato opprettet</label>
+        <input class="edit-box" id="date-txt" type="text">
+        
+        <label id="person">Navn på person ansvarlig for saken</label>
+        <input class="edit-box" id="person-txt" type="text">
+        
+        <p id="p-txt">Er saken løst?</p>
+        <input id="checkYes" type="radio" name="caseState" value="ja"> 
+        <p id="yes">Ja</p>
+        <input id="checkNo" type="radio" name="caseState" value="nei">
+        <p id="no">Nei</p>
+    
+        <input id="save-btn" type="button" value="Lagre">
+        <input id="back-btn" type="button" value="tilbake">
+        
+        
+        
+    </article>
+    
+</section>
+
+<script src="js/add.js"></script>
